@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聊天 - 班级网站</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="news.html">新闻</a></li>
+                <li><a href="fun.html">趣事</a></li>
+                <li><a href="homework.html">作业</a></li>
+                <li><a href="answers.html">答案</a></li>
+                <li><a href="chat.html">聊天</a></li>
+                <li><a href="login.html">登录</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="chat-container">
+            <div class="chat-sidebar">
+                <h3>班级群聊</h3>
+                <div class="chat-user"></div>
+                <div class="chat-user"></div>
+                <div class="chat-user"></div>
+                <div class="chat-user"></div>
+                <div class="chat-user"></div>
+            </div>
+            <div class="chat-main">
+                <div class="chat-messages">
+                    <!-- 历史消息将通过JavaScript动态加载 -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="messageInput" placeholder="输入消息...">
+                    <button id="sendButton">发送</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="js/chat.js"></script>
+</body>
+</html>
