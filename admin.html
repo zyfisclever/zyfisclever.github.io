@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理页面 - 班级网站</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .admin-panel {
+            max-width: 1000px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .admin-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .admin-section h2 {
+            color: var(--dark-orange);
+        }
+        
+        .admin-btn {
+            background-color: var(--primary-orange);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .admin-btn:hover {
+            background-color: var(--dark-orange);
+        }
+        
+        .admin-form {
+            margin-top: 15px;
+        }
+        
+        .admin-form input, .admin-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid var(--border-gray);
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        .admin-form textarea {
+            height: 100px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../news.html">新闻</a></li>
+                <li><a href="../fun.html">趣事</a></li>
+                <li><a href="../homework.html">作业</a></li>
+                <li><a href="../answers.html">答案</a></li>
+                <li><a href="../chat.html">聊天</a></li>
+                <li><a href="../login.html">登录</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="admin-panel">
+            <h1>管理员面板</h1>
+            
+            <div class="admin-section">
+                <h2>发布公告</h2>
+                <button class="admin-btn" id="newsBtn">管理新闻</button>
+                <button class="admin-btn" id="funBtn">管理趣事</button>
+            </div>
+            
+            <div class="admin-section">
+                <h2>作业管理</h2>
+                <button class="admin-btn" id="homeworkBtn">管理作业</button>
+            </div>
+            
+            <div class="admin-section">
+                <h2>答案管理</h2>
+                <button class="admin-btn" id="answersBtn">管理答案</button>
+            </div>
+            
+            <div class="admin-section">
+                <h2>账户管理</h2>
+                <button class="admin-btn" id="usersBtn">管理用户</button>
+            </div>
+            
+            <div class="admin-section" id="newsManagement" style="display: none;">
+                <h3>新闻管理</h3>
+                <form class="admin-form" id="newsForm">
+                    <input type="text" id="newsTitle" placeholder="新闻标题" required>
+                    <textarea id="newsContent" placeholder="新闻内容" required></textarea>
+                    <button type="submit" class="admin-btn">发布新闻</button>
+                </form>
+            </div>
+            
+            <div class="admin-section" id="funManagement" style="display: none;">
+                <h3>趣事管理</h3>
+                <form class="admin-form" id="funForm">
+                    <input type="text" id="funTitle" placeholder="趣事标题" required>
+                    <textarea id="funContent" placeholder="趣事内容" required></textarea>
+                    <button type="submit" class="admin-btn">发布趣事</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    
+    <script src="../js/admin.js"></script>
+</body>
+</html>
